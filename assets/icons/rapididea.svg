@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" fill="none">
+  <defs>
+    <linearGradient id="tile" x1="40" y1="0" x2="470" y2="512" gradientUnits="userSpaceOnUse"><stop stop-color="#1B2731"/><stop offset="1" stop-color="#141E27"/></linearGradient>
+    <linearGradient id="mint" x1="86" y1="80" x2="426" y2="432" gradientUnits="userSpaceOnUse"><stop stop-color="#54E7B0"/><stop offset="1" stop-color="#35DDA3"/></linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="90" fill="url(#tile)"/>
+  <g fill="none" stroke="url(#mint)" stroke-width="26" stroke-linecap="round"><path d="M256 78V58M136 120l-16-16M376 120l16-16M98 226H78M414 226h20"/></g>
+    <path fill="url(#mint)" d="M256 110a106 106 0 0 1 72 184c-18 16-28 28-30 50h-84c-2-22-12-34-30-50a106 106 0 0 1 72-184Z"/>
+    <path d="m229 224 27 28 27-28M256 252v52" fill="none" stroke="url(#tile)" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="210" y="364" width="92" height="28" rx="10" fill="url(#mint)"/><path d="M225 410h62a31 31 0 0 1-62 0Z" fill="url(#mint)"/>
+</svg>

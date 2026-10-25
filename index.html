@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Linus · L0x3n</title>
+  <meta name="description" content="Linus (L0x3n), a Swedish vibecoder. Games, desktop apps, web products and AI pipelines, all built by directing AI coding agents.">
+  <meta property="og:title" content="Linus · L0x3n">
+  <meta property="og:description" content="Games, desktop apps, web products and AI pipelines, built by directing AI coding agents.">
+  <meta property="og:image" content="https://l0x3n.github.io/assets/og.png">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="wrap">
+      <a class="brand" href="#top"><span class="dot"></span>linus@l0x3n</a>
+      <nav class="nav" aria-label="Sections">
+        <a href="#work">Work</a>
+        <a href="#range">Range</a>
+        <a href="#activity">Activity</a>
+        <a href="#method">Method</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <button class="theme-btn" id="theme" type="button" aria-label="Toggle light and dark theme"></button>
+    </div>
+  </header>
+
+  <main id="top">
+    <div class="wrap hero">
+      <div class="prompt">C:\Users\linus&gt; <b>ls projects</b> | measure<span class="cursor"></span></div>
+      <h1>I turn ideas into <em>working software</em> by directing AI agents.</h1>
+      <p class="lede">
+        I'm Linus, a vibecoder from Sweden. Since May 2026 I have steered Claude Code, Codex and a small crowd of other agents through
+        <strong><span data-stat="projects">0</span> projects</strong> on one Windows PC: games in Godot, Unity and Three.js,
+        desktop apps in Electron and Tauri, web products for real people, and the tools that make the agents better at all of it.
+      </p>
+      <div class="stats">
+        <div class="stat"><div class="n" data-stat="projects">0</div><div class="l">projects on this page</div></div>
+        <div class="stat"><div class="n" data-stat="commits">0</div><div class="l">commits since May</div></div>
+        <div class="stat"><div class="n" data-stat="days">0</div><div class="l">days with commits</div></div>
+        <div class="stat"><div class="n" data-stat="live">0</div><div class="l">live on the web</div></div>
+        <div class="stat"><div class="n" data-stat="stacks">0</div><div class="l">technologies in use</div></div>
+      </div>
+    </div>
+    <div class="marquee" aria-hidden="true"><div class="track" id="marquee"></div></div>
+
+    <section id="work">
+      <div class="wrap">
+        <div class="sec-head">
+          <div><div class="mono">01 / Selected work</div><h2>Start here</h2></div>
+          <p>Eleven projects that show the range best. Click any of them for the story, the numbers and a link if it runs in your browser.</p>
+        </div>
+        <div class="featured" id="featured"></div>
+
+        <div class="sec-head" style="margin-top:72px">
+          <div><div class="mono">Archive</div><h2>The whole shelf</h2></div>
+          <p>Finished products, playable prototypes and a few honest works in progress. Sorted by how much I'd want you to see them.</p>
+        </div>
+        <div class="filters" id="filters" role="toolbar" aria-label="Filter projects"></div>
+        <div class="grid" id="grid"></div>
+      </div>
+    </section>
+
+    <section id="range">
+      <div class="wrap">
+        <div class="sec-head">
+          <div><div class="mono">02 / Range</div><h2>One person, many stacks</h2></div>
+          <p>Vibecoding means I pick the right tool for the idea instead of the one I already know. Counted from the projects above.</p>
+        </div>
+        <div class="range" id="range-root"></div>
+      </div>
+    </section>
+
+    <section id="activity">
+      <div class="wrap">
+        <div class="sec-head">
+          <div><div class="mono">03 / Activity</div><h2>Five months of shipping</h2></div>
+          <p>Every commit across my own repositories, read straight from git on my machine. Third-party clones are left out.</p>
+        </div>
+        <div class="heat-wrap">
+          <div class="heat-main">
+            <div class="heat-months" id="heat-months"></div>
+            <div class="heat" id="heat" role="img" aria-label="Commit activity heatmap from May to October 2026"></div>
+            <div class="heat-legend">Less <i style="background:var(--heat-0)"></i><i style="background:var(--heat-1)"></i><i style="background:var(--heat-2)"></i><i style="background:var(--heat-3)"></i><i style="background:var(--heat-4)"></i> More</div>
+          </div>
+          <div class="heat-facts" id="heat-facts"></div>
+        </div>
+        <div class="months" id="months"></div>
+      </div>
+    </section>
+
+    <section id="method">
+      <div class="wrap">
+        <div class="sec-head">
+          <div><div class="mono">04 / Method</div><h2>How I vibecode</h2></div>
+          <p>Prompting is the easy part. The skill is in deciding what to build, holding the agents to a standard and proving the result works.</p>
+        </div>
+        <div class="steps" id="steps"></div>
+        <div class="toolbelt">
+          <div class="tool reveal">
+            <h3>The toolbelt</h3>
+            <div class="mono" style="margin-bottom:10px">Agents I direct</div>
+            <div class="pills" id="pills-agents"></div>
+            <div class="mono" style="margin:18px 0 10px">Hooked into</div>
+            <div class="pills" id="pills-mcp"></div>
+            <div class="mono" style="margin:18px 0 10px">Running locally on a 3060 Ti</div>
+            <div class="pills" id="pills-local"></div>
+          </div>
+          <div class="tool reveal">
+            <h3>Things I built for the agents</h3>
+            <ul id="own-tools"></ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <div class="wrap">
+        <div class="mono">05 / Contact</div>
+        <h2>Got an idea that should exist?</h2>
+        <p>I like projects with a clear target and a deadline. Games, internal tools, a demo for a pitch, or a desktop app that saves someone an hour a day.</p>
+        <div class="btns">
+          <a class="btn" href="https://github.com/L0x3n" target="_blank" rel="noopener">GitHub · L0x3n ↗</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <span>Built with Claude Code, like everything else here.</span>
+      <span>Linus · L0x3n · 2026</span>
+    </div>
+  </footer>
+
+  <dialog id="project" aria-label="Project details"></dialog>
+
+  <script src="data/projects.js"></script>
+  <script src="data/activity.js"></script>
+  <script src="data/site.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
