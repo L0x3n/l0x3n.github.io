@@ -2348,5 +2348,674 @@ window.PROJECTS = [
    "assets/shots/process-io-1.webp"
   ],
   "icon": ""
+ },
+ {
+  "id": "the-creator-slot",
+  "title": "The Creator",
+  "oneLiner": "A premium HTML5 ways slot with a deterministic engine, its own game server and a public play-money demo (18+).",
+  "category": "game",
+  "stack": [
+   "PixiJS",
+   "TypeScript",
+   "Vite",
+   "Vitest",
+   "Playwright",
+   "axe-core",
+   "Node",
+   "Python"
+  ],
+  "status": "live",
+  "liveUrl": "https://l0x3n.github.io/the-creator/",
+  "github": {
+   "repo": "L0x3n/the-creator",
+   "visibility": "public"
+  },
+  "period": "Oct 2026",
+  "metrics": [
+   "258 commits in 11 days",
+   "627 test cases in 66 files",
+   "RTP 96%, max win 25,000x",
+   "10,000 randomized rounds with zero parity errors",
+   "about 85,000 lines of code and docs tooling",
+   "demo version 0.9.4 live"
+  ],
+  "highlights": [
+   "Monorepo of focused packages (data, protocol, rng, engine, local-rgs, sim) with a deterministic ways engine and an HMAC_DRBG game server (apps/rgs) with journal and wallet API that plays the same rounds as the demo.",
+   "Client core plays the engine's script inside a Web Worker; 10,000 randomized rounds and 1,000 feature rounds showed zero parity errors against the engine, and the outcome list checks 69 of 69.",
+   "Production pipeline around the game: GDD and math docs, art and audio toolchains, colour-blind checks, accessibility pass with axe, performance budgets, soak and flash tests, and a release checklist for the public demo.",
+   "Fully documented decision log (K and B numbered), versioned plan tags v0.1 to v0.6 and game tags v0.9.0 to v0.9.4."
+  ],
+  "score": 4,
+  "shots": [
+   "assets/shots/the-creator-slot-1.webp",
+   "assets/shots/the-creator-slot-2.webp"
+  ],
+  "icon": ""
+ },
+ {
+  "id": "sunken-riches",
+  "title": "Sunken Riches",
+  "oneLiner": "A 243-ways video slot with a deterministic math engine proven to 95.97% RTP over 100 million simulated spins, presented in PixiJS.",
+  "category": "game",
+  "stack": [
+   "PixiJS v8",
+   "TypeScript",
+   "Vite",
+   "Vitest",
+   "Howler"
+  ],
+  "status": "in-progress",
+  "liveUrl": "",
+  "github": {
+   "repo": "",
+   "visibility": "none"
+  },
+  "period": "Jun 2026",
+  "metrics": [
+   "RTP 95.974% +/- 0.111 over 100M spins",
+   "29 tests",
+   "243 ways",
+   "phases 0 to 5 of 11 done",
+   "about 2,000 lines of code"
+  ],
+  "highlights": [
+   "Pure headless math engine with a seeded mulberry32 RNG, fully separated from the PixiJS presentation layer which only plays back results, so it is cheat-proof and RTP-verifiable.",
+   "Node simulator and committed PARSHEET.md passed the math gate: 100M spins, 59.2% base game, 24.5% free spins, 12.4% hold-and-win contribution.",
+   "Found and fixed a real design bug: weight-1 coins on reel strips could never reach the 6-coin trigger, so coins became a per-cell overlay with a tunable trigger probability.",
+   "Features modelled: Treasure Dive free spins with rising-tide multiplier and retrigger, Hold and Win with Mini, Minor, Major and Grand pots, and animated win rollups."
+  ],
+  "score": 3,
+  "shots": [
+   "assets/shots/sunken-riches-1.webp",
+   "assets/shots/sunken-riches-2.webp"
+  ],
+  "icon": ""
+ },
+ {
+  "id": "gocasino",
+  "title": "GOCasino",
+  "oneLiner": "A server-authoritative casino platform with provably fair games and a full poker engine, written with zero runtime dependencies.",
+  "category": "web",
+  "stack": [
+   "Node 22",
+   "Vanilla JavaScript",
+   "SSE",
+   "Docker",
+   "Render"
+  ],
+  "status": "playable-prototype",
+  "liveUrl": "",
+  "github": {
+   "repo": "L0x3n/gocasino",
+   "visibility": "private"
+  },
+  "period": "Jun to Jul 2026",
+  "metrics": [
+   "61 commits in two weeks",
+   "About 7,000 lines of server code, 17 front-end pages",
+   "144 automated checks per the project notes (70 unit and engine, 74 security)",
+   "15 database migrations",
+   "Hold'em, PLO4, PLO5 and an all-in-or-fold mode"
+  ],
+  "highlights": [
+   "Server-authoritative design: balances, outcomes and settlement live on the server with atomic SQLite transactions, so editing localStorage or faking a login does nothing.",
+   "Provably fair outcomes: HMAC results with per-round bet entropy folded in after the commit, a public verifier page and a hash chain for poker hands.",
+   "Poker engine with side pots and odd-chip handling, bots, a bad-beat jackpot, a hand replayer and fuzz tests across all game modes.",
+   "Security work verified by multi-agent audits: scrypt passwords, TOTP 2FA encrypted at rest, hashed session ids, CSRF and rate limits, plus self-exclusion and deposit limits."
+  ],
+  "score": 2,
+  "shots": [
+   "assets/shots/gocasino-1.webp",
+   "assets/shots/gocasino-2.webp"
+  ],
+  "icon": ""
+ },
+ {
+  "id": "tennis-edge",
+  "title": "Tennis Edge",
+  "oneLiner": "Compares bookmaker tennis odds with an LLM-adjusted probability, flags positive expected value and logs every prediction for backtesting.",
+  "category": "ai",
+  "stack": [
+   "TypeScript",
+   "node:sqlite",
+   "React",
+   "Vite",
+   "Vitest",
+   "Anthropic SDK",
+   "Claude CLI"
+  ],
+  "status": "shipped",
+  "liveUrl": "",
+  "github": {
+   "repo": "L0x3n/tennis-edge",
+   "visibility": "private"
+  },
+  "period": "Jul 2026",
+  "metrics": [
+   "5.4k lines of TypeScript",
+   "57 tests",
+   "7 build phases in one day, then a market tab and a Pinnacle adapter",
+   "odds from about 20 bookmakers",
+   "replay proof over 18 Wimbledon matches"
+  ],
+  "highlights": [
+   "The LLM never states a raw probability: code computes a no-vig market prior (Pinnacle, else the median) and the model estimates only the deviation, using a JSON schema and adaptive thinking, with guards against priors from training data on famous players.",
+   "Append-only odds snapshots with views for latest, best and closing odds, so the final report scores closing-line value, bucket calibration, Brier score and flat-stake P&L instead of hit rate.",
+   "A replay run on 18 past matches using only pre-match information produced 2 signal-driven picks (+1.85 units) and 9 matches left untouched, and led to three data-quality guards (odds outlier ratio, source conflict, minimum probability).",
+   "Runs without an API key through the claude CLI on a subscription (stdin prompt, strict MCP config, single turn) with cost guards (hours ahead, daily cap, regex pre-gate); a Pinnacle-style market tab shows odds movement with sparklines."
+  ],
+  "score": 3,
+  "shots": [
+   "assets/shots/tennis-edge-1.webp",
+   "assets/shots/tennis-edge-2.webp"
+  ],
+  "icon": ""
+ },
+ {
+  "id": "high-table",
+  "title": "The High Table",
+  "oneLiner": "A one-page site for a private 60-seat high roller poker room with a vouch-based membership system.",
+  "category": "web",
+  "stack": [
+   "HTML",
+   "CSS",
+   "JavaScript",
+   "PowerShell build script",
+   "Zero-dependency Node server"
+  ],
+  "status": "in-progress",
+  "liveUrl": "",
+  "github": {
+   "repo": "",
+   "visibility": "none"
+  },
+  "period": "Sep 2026",
+  "metrics": [
+   "918-line index.html generated from 3 source parts",
+   "Membership capped at 60 seats",
+   "Built in a single day"
+  ],
+  "highlights": [
+   "Scarcity is the design idea: no open join button, seats are capped and entry goes through a weekly satellite, one vouch per member per month, or a cold application.",
+   "Source is split into head, body and script parts glued by build.ps1 into the hosted index.html and a publishable artifact.html.",
+   "All editable settings sit in one CONFIG block, and the site carries chips-only wording, an 18+ notice and a non-affiliation footer.",
+   "A PLAYBOOK.md documents the whole recruiting and ledger logic."
+  ],
+  "score": 2,
+  "shots": [
+   "assets/shots/high-table-1.webp",
+   "assets/shots/high-table-2.webp"
+  ],
+  "icon": ""
+ },
+ {
+  "id": "ggsnap",
+  "title": "GGSnap",
+  "oneLiner": "A window manager for online poker tables that snaps 4 to 24 tables into grids across three monitors and highlights the table that needs action.",
+  "category": "app",
+  "stack": [
+   "Electron",
+   "koffi",
+   "JavaScript"
+  ],
+  "status": "shipped",
+  "liveUrl": "",
+  "github": {
+   "repo": "",
+   "visibility": "none"
+  },
+  "period": "Sep 2026",
+  "metrics": [
+   "5.3k lines of JavaScript",
+   "7 commits",
+   "grids for 4, 8, 12, 16 and 24 tables",
+   "tests snap real windows plus a fake table rig"
+  ],
+  "highlights": [
+   "Grid chooser uses as few screens as possible while respecting the client's minimum table width (560 px), and stacks overlapping tables so the hero cards and buttons are never covered.",
+   "Table pixels can only be read with Electron's desktopCapturer; PrintWindow returns black on the GPU-rendered client and BitBlt fails when the window is in a hardware overlay.",
+   "Turn detection compares the most-changed fifth of the button-area cells rather than the mean, because the button row is only a sixth of the read region and drowns in an average.",
+   "A live test drives a fake table rig in test/faketable and refuses to overwrite real settings; the snapping core was later ported into 200bbs Stream."
+  ],
+  "score": 2,
+  "shots": [
+   "assets/shots/ggsnap-1.webp",
+   "assets/shots/ggsnap-2.webp"
+  ],
+  "icon": ""
+ },
+ {
+  "id": "uppslaget",
+  "title": "Uppslaget",
+  "oneLiner": "One search box that recognises Swedish phone numbers, company numbers, personal numbers and municipalities and answers from open government APIs.",
+  "category": "web",
+  "stack": [
+   "Node.js",
+   "PTS number API",
+   "EU VIES",
+   "Kolada v3",
+   "SCB PxWeb",
+   "Bolagsverket open data"
+  ],
+  "status": "shipped",
+  "liveUrl": "",
+  "github": {
+   "repo": "",
+   "visibility": "none"
+  },
+  "period": "Sep 2026",
+  "metrics": [
+   "2.5k lines of JavaScript",
+   "zero dependencies, Node 18 or newer",
+   "5 data sources wired in",
+   "built in one day, no git repo",
+   "self-test and test scripts included"
+  ],
+  "highlights": [
+   "Detects the input type itself and computes what the number implies locally (number type, E.164 form, company form, VAT number, birth date, age, sex, birth county).",
+   "Resolves a phone number's area-code length without a table by trying 3, 2 and 1 digits against the PTS operator API and reading 400 versus 204 responses.",
+   "EU VIES supplies company name and registered address with no key, and the municipality is picked out of the address automatically; Kolada gives median income for the exact age band and sex in that municipality.",
+   "Builds deep links with the search pre-filled instead of scraping third-party sites, so it never breaks and respects their terms."
+  ],
+  "score": 2,
+  "shots": [
+   "assets/shots/uppslaget-1.webp",
+   "assets/shots/uppslaget-2.webp"
+  ],
+  "icon": ""
+ },
+ {
+  "id": "roennmark",
+  "title": "ROENNMARK",
+  "oneLiner": "A cinematic single-page portfolio site for a film editor, with a preloader, custom cursor and film-grain overlay.",
+  "category": "client",
+  "stack": [
+   "HTML",
+   "CSS",
+   "Vanilla JavaScript",
+   "Render static site"
+  ],
+  "status": "live",
+  "liveUrl": "https://roennmark.onrender.com",
+  "github": {
+   "repo": "L0x3n/roennmark",
+   "visibility": "public"
+  },
+  "period": "Sep 2026",
+  "metrics": [
+   "4 commits within about one hour",
+   "About 70 KB of hand-written HTML, CSS and JS",
+   "Swedish copy, deployed from the first day"
+  ],
+  "highlights": [
+   "Letter-by-letter preloader with a progress counter, a custom cursor with a follower and a film-grain overlay.",
+   "A film-frame SVG logo with sprocket holes and a play triangle.",
+   "Sections for selected projects, passion for visual storytelling, working process and contact.",
+   "Replaced an external hero video with a CSS animated background to drop the third-party dependency."
+  ],
+  "score": 2,
+  "shots": [
+   "assets/shots/roennmark-1.webp"
+  ],
+  "icon": ""
+ },
+ {
+  "id": "cs2-skin-sandbox",
+  "title": "CS2 Skin and Sticker Sandbox",
+  "oneLiner": "A personal Three.js tool that extracts Counter-Strike 2 weapon models and recreates holographic stickers and wear shaders in a game-quality 3D viewer.",
+  "category": "app",
+  "stack": [
+   "Three.js",
+   "TypeScript",
+   "Vite",
+   "GLSL",
+   "ValveResourceFormat",
+   "Electron"
+  ],
+  "status": "in-progress",
+  "liveUrl": "",
+  "github": {
+   "repo": "",
+   "visibility": "none"
+  },
+  "period": "Jun 2026",
+  "metrics": [
+   "23 commits in one day",
+   "phase 0 critical spike done, phase 1 renderer-side done",
+   "about 2,000 lines of code"
+  ],
+  "highlights": [
+   "Extraction pipeline with ValveResourceFormat that decompiles CS2 model and texture files from the local install into glTF and PNG, regenerated by tools/extract.sh.",
+   "Reverse-engineered Valve's holographic sticker recipe from its own shader and material data, driving a custom GLSL holo shader from the real spectrum lookup texture with a live edge-first scrape slider.",
+   "Diagnosed a dual-LOD bug (HD and legacy meshes both loaded) that doubled geometry and broke decal projection, fixed by keeping only the hd meshes.",
+   "Documented dead ends honestly (UV1 and position-map remaps) and prioritised the next steps in IMPROVEMENTS.md."
+  ],
+  "score": 3,
+  "shots": [
+   "assets/shots/cs2-skin-sandbox-1.webp",
+   "assets/shots/cs2-skin-sandbox-2.webp"
+  ],
+  "icon": ""
+ },
+ {
+  "id": "skinwatch",
+  "title": "SkinWatch",
+  "oneLiner": "Watches CS2 skin listings across three marketplaces and alerts on price, float or charm pattern.",
+  "category": "web",
+  "stack": [
+   "Node.js",
+   "Server-Sent Events",
+   "Windows toast",
+   "CSFloat API",
+   "Steam Market",
+   "Skinport"
+  ],
+  "status": "shipped",
+  "liveUrl": "",
+  "github": {
+   "repo": "",
+   "visibility": "none"
+  },
+  "period": "Jul 2026",
+  "metrics": [
+   "1.8k lines of JavaScript",
+   "15 tests",
+   "3 market sources",
+   "zero dependencies",
+   "alert chain verified live end to end"
+  ],
+  "highlights": [
+   "Advanced mode filters single listings by float range, paint seed or index, StatTrak or Souvenir, buy-now or auction, sticker text and charm pattern ranges such as 20000-25000, 77777.",
+   "Alert chain verified live: a Steam watch fired at 418.75 kr against a 500 kr limit, a Skinport watch fired through the background poller, and Windows toasts come from PowerShell WinRT without admin rights.",
+   "Alerts have hysteresis (re-arm at +5 percent or by manual reset), CSFloat results are de-duplicated per listing id, and each source backs off separately after a 429.",
+   "Plain Node: HTTP server, JSON API, SSE push to the UI, pure filter predicates in their own module."
+  ],
+  "score": 2,
+  "shots": [
+   "assets/shots/skinwatch-1.webp",
+   "assets/shots/skinwatch-2.webp"
+  ],
+  "icon": ""
+ },
+ {
+  "id": "fura",
+  "title": "FURA",
+  "oneLiner": "A fictional Nordic nicotine pouch brand with a full website and a rotating procedural 3D can.",
+  "category": "web",
+  "stack": [
+   "Three.js",
+   "TypeScript",
+   "Vite",
+   "Hash router"
+  ],
+  "status": "playable-prototype",
+  "liveUrl": "",
+  "github": {
+   "repo": "",
+   "visibility": "none"
+  },
+  "period": "Jul 2026",
+  "metrics": [
+   "About 1,100 lines of TypeScript and CSS",
+   "6 product flavors with detail pages",
+   "Procedural 3D can with canvas-drawn labels, drag to spin",
+   "tsc and vite build green"
+  ],
+  "highlights": [
+   "The 3D can is generated in code (cylinder, lid, rim torus, canvas-textured labels, studio lighting and shadow) and spins with drag.",
+   "Full multi-page site on a hash router: home, catalog, product detail with related items, sustainability story, newsletter and a fake cart counter.",
+   "Nordic paper, moss and ice palette with Fraunces and Inter, chosen by the user from several directions.",
+   "18+ age gate and nicotine warning built in."
+  ],
+  "score": 2,
+  "shots": [
+   "assets/shots/fura-1.webp",
+   "assets/shots/fura-2.webp"
+  ],
+  "icon": ""
+ },
+ {
+  "id": "swords-and-sandals",
+  "title": "Swords and Sandals (card roguelite)",
+  "oneLiner": "A gladiator arena card roguelite with a cinematic rotating Colosseum menu, relics, potions, shops and a final Emperor boss.",
+  "category": "game",
+  "stack": [
+   "TypeScript",
+   "Vite",
+   "Canvas 2D",
+   "Vitest",
+   "PixelLab",
+   "WebAudio"
+  ],
+  "status": "in-progress",
+  "liveUrl": "",
+  "github": {
+   "repo": "",
+   "visibility": "none"
+  },
+  "period": "Jun 2026",
+  "metrics": [
+   "51 tests",
+   "phases 0 to 7 plus Emperor boss and combatant sprites done",
+   "about 4,100 lines of code",
+   "29 source files"
+  ],
+  "highlights": [
+   "Headless combat engine with an event queue and a data-driven hook registry for statuses (Strength, Dexterity, Vulnerable, Weak, Bleed), relics and potions, so new effects are data rather than code.",
+   "Drag-to-play card combat, exhaust piles, deck viewer and an attack-versus-effect damage distinction for potions.",
+   "Run model with persistent HP, gold, deck and relics: limited single fights, forced tournament gauntlet, tier-up scaling, town shops with re-rolled stock, permadeath and recap.",
+   "Cinematic Colosseum title scene built from a faux-3D orbit ring of depth-sorted arches with sunset, torches and rising embers."
+  ],
+  "score": 3,
+  "shots": [
+   "assets/shots/swords-and-sandals-1.webp",
+   "assets/shots/swords-and-sandals-2.webp"
+  ],
+  "icon": ""
+ },
+ {
+  "id": "valheim-hardcore-guide",
+  "title": "Valheim Hardcore WR Guide",
+  "oneLiner": "A research guide for a very-hard-hardcore Valheim speedrun, with numbers decompiled from the game install and an interactive 243-step checklist.",
+  "category": "web",
+  "stack": [
+   "Node.js",
+   "ilspycmd",
+   "UnityPy",
+   "Claude artifact",
+   "13 research agents"
+  ],
+  "status": "shipped",
+  "liveUrl": "",
+  "github": {
+   "repo": "",
+   "visibility": "none"
+  },
+  "period": "Oct 2026",
+  "metrics": [
+   "about 1,000 lines each in Swedish and English",
+   "243 checklist items",
+   "799 asset bundles scanned",
+   "13 research agents",
+   "205 world-gen locations reproduced bit-exact"
+  ],
+  "highlights": [
+   "When the wikis returned HTTP 401 and 402, the numbers were read straight from my own install by decompiling assembly_valheim.dll and scanning 799 Unity bundles, then cross-checked with a second pass in Node that found and fixed several figures.",
+   "Thirteen agents researched techniques and edge cases, and every one is labelled verified in code, untested, allowed or banned under the speedrun rules.",
+   "A Node port of the world generator reproduces 205 prioritised locations exactly, and is marked as off limits where the run category forbids seed scanning.",
+   "Ships as an interactive page with per-boss checklists, notes per phase and diagrams (tempo line, sun compass, boss distances, damage windows) that saves progress per user."
+  ],
+  "score": 2,
+  "shots": [],
+  "icon": ""
+ },
+ {
+  "id": "local-qwen-image",
+  "title": "Local Qwen Image Runner",
+  "oneLiner": "A one-command PowerShell script that runs a 14.6 GB Qwen image model on an 8 GB GPU through stable-diffusion.cpp, with no Python.",
+  "category": "ai",
+  "stack": [
+   "PowerShell",
+   "stable-diffusion.cpp",
+   "Qwen-Image-2.1 GGUF Q4_K_M",
+   "Qwen3-VL text encoder"
+  ],
+  "status": "shipped",
+  "liveUrl": "",
+  "github": {
+   "repo": "",
+   "visibility": "none"
+  },
+  "period": "Oct 2026",
+  "metrics": [
+   "126 s per 1024 by 1024 image",
+   "7.2 GB peak VRAM on an 8 GB card",
+   "20 steps",
+   "108-line script"
+  ],
+  "highlights": [
+   "Fits a 14.6 GB model and text encoder onto an RTX 3060 Ti using CPU offload, a VRAM cap and VAE tiling, measured at 7.2 GB peak VRAM with free system RAM always above 4 GB.",
+   "The script unloads any resident Ollama model through its API first, because an image model plus a 20 GB LLM froze the whole PC.",
+   "Prompts go in as UTF-8 files and output is timestamped and opened automatically; in-image text ('QWEN 2.1' on a sign) rendered correctly on the first try."
+  ],
+  "score": 2,
+  "shots": [
+   "assets/shots/local-qwen-image-1.webp"
+  ],
+  "icon": ""
+ },
+ {
+  "id": "spelsparr",
+  "title": "Spelsparr",
+  "oneLiner": "A researched spec for a gambling blocker with time-locked unlocking (30, 90 or 120 days), covering law, requirements, data model and tests.",
+  "category": "app",
+  "stack": [
+   "Documentation only"
+  ],
+  "status": "concept",
+  "liveUrl": "",
+  "github": {
+   "repo": "",
+   "visibility": "none"
+  },
+  "period": "Aug 2026",
+  "metrics": [
+   "14 documents in docs plus a README, 0 lines of code",
+   "29 legal rules registered, all status SPEC",
+   "Traceability chain from law ID to requirement to code comment to test case"
+  ],
+  "highlights": [
+   "Documentation is traceable: LAW-IDs in REGELVERK map to REQ-IDs in KRAVSPEC, then to code comments and TC-IDs in TESTSPEC, and a requirement with no test case counts as not implemented.",
+   "Legal analysis drives the design: unlock delay chosen at purchase mirrors the national self-exclusion periods, a block survives non-payment, and the server never links a payment to a lock.",
+   "Safety valves are designed in: owner revocation after 7 days, a dead-man switch after 30 days offline with a signed wind-down certificate, and support that technically cannot shorten a lock.",
+   "Hard platform limits are written down: iOS cannot list installed apps, Android QUERY_ALL_PACKAGES needs Play approval and the national exclusion registry is closed to non-licensees."
+  ],
+  "score": 2,
+  "shots": [],
+  "icon": ""
+ },
+ {
+  "id": "fixa",
+  "title": "Fixa",
+  "oneLiner": "A Swedish marketplace where homeowners book tradespeople from a price menu with the ROT tax deduction calculated before booking.",
+  "category": "web",
+  "stack": [
+   "TypeScript",
+   "Supabase",
+   "Stripe Connect",
+   "React/Vite/Tailwind",
+   "Node test runner"
+  ],
+  "status": "in-progress",
+  "liveUrl": "",
+  "github": {
+   "repo": "",
+   "visibility": "none"
+  },
+  "period": "Jul 2026",
+  "metrics": [
+   "Phase 1 core built and verified, of 8 planned phases",
+   "54 passing tests for the pricing engine, money types and booking state machine",
+   "17 passing database checks across 5 migrations",
+   "25 seeded SKUs, 16 of them ROT-eligible",
+   "5 research documents against primary legal sources"
+  ],
+  "highlights": [
+   "Pricing engine and booking state machine written dependency-free and typechecked without Node types, so the same code can run in Deno edge functions.",
+   "Database migrations are verified without Docker by running them against PGlite (Postgres in WASM) in plain Node scripts.",
+   "docs/gar-inte.md lists every part of the original master prompt that does not work as described, with the legal citation and what was built instead.",
+   "Legal findings shaped the design: no escrow (card charged only at completion), SetupIntent at booking and direct charge on the craftsman's account, and a +/-15 percent price band that matches the consumer services act."
+  ],
+  "score": 3,
+  "shots": [],
+  "icon": ""
+ },
+ {
+  "id": "typesafe-skill",
+  "title": "TypeSafe plugin setup",
+  "oneLiner": "Installs and wires the TypeSafe skill so coding agents can add typed AI judgments, such as yes-no probabilities and ranked choices, to any app.",
+  "category": "tool",
+  "stack": [
+   "Claude Code plugin",
+   "TypeSafe System One API",
+   "Windows environment variables"
+  ],
+  "status": "concept",
+  "liveUrl": "",
+  "github": {
+   "repo": "",
+   "visibility": "none"
+  },
+  "period": "Sep 2026",
+  "metrics": [
+   "plugin typesafe@typesafe-ai v0.5.7 installed at user scope on 2026-09-20",
+   "one skill, no hooks, no MCP servers"
+  ],
+  "highlights": [
+   "Plugin installed with the claude plugin CLI at user scope so the skill is available in every session started from the home folder.",
+   "The skill is guidance only: always read the live docs (docs.typesafe.ai/llms.txt) before writing an integration.",
+   "TypeSafe models answer with typed verdicts (a yes-no probability, one of several choices, a score on an ordered scale) instead of generated text, which suits routing, ranking, extraction and verification.",
+   "The API key sits in a user-level environment variable, never in a file or repo, because the home folder is itself a git repository."
+  ],
+  "score": 1,
+  "shots": [],
+  "icon": ""
+ },
+ {
+  "id": "screen-recorder",
+  "title": "Screen Recorder",
+  "oneLiner": "A browser-based screen recorder that saves MP4 video and an MP3 audio track.",
+  "category": "web",
+  "stack": [
+   "Vite",
+   "TypeScript",
+   "getDisplayMedia",
+   "MediaRecorder",
+   "lamejs"
+  ],
+  "status": "shipped",
+  "liveUrl": "",
+  "github": {
+   "repo": "",
+   "visibility": "none"
+  },
+  "period": "Jul 2026",
+  "metrics": [
+   "490 lines of TypeScript, no framework",
+   "built and verified in one day",
+   "no git repo"
+  ],
+  "highlights": [
+   "Records straight to MP4 (H.264 and AAC) in Chrome by probing a list of supported mime types.",
+   "Optional microphone mixed with system audio through an AudioContext.",
+   "MP3 export decodes the audio with decodeAudioData and encodes with the maintained lamejs fork, because classic lamejs 1.2.1 throws 'MPEGMode is not defined'.",
+   "A test hook (window.__rec) verifies the MP3 pipeline headlessly; a CSS bug where display:flex overrode the hidden attribute was found and fixed."
+  ],
+  "score": 1,
+  "shots": [
+   "assets/shots/screen-recorder-1.webp",
+   "assets/shots/screen-recorder-2.webp"
+  ],
+  "icon": ""
  }
 ];
